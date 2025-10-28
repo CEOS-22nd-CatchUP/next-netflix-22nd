@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "SFPro";
+  src: url("@/assets/fonts/SF-Pro.ttf") format("truetype");
+  font-weight: 100 900; 
+  font-display: swap; 
+}
+
+@theme {
+  --text-nav1-sm: 17.2px;
+  --text-nav1-sm--line-height: 30.45px;
+  --text-nav1-sm-font-weight: 400;
+  --text-nav1-sm-letter-spacing: 0.76px;
+
+  --text-nav2-sm: 13.64px;
+  --text-nav2-sm--line-height: 20px;
+  --text-nav2-sm-font-weight: 400;
+  --text-nav2-sm-letter-spacing: 0.04px;
+
+  --text-nav3-sm: 8.2px;
+  --text-nav3-sm--line-height: 30.4px;
+  --text-nav3-sm--font-weight: 500;
+  --text-nav3-sm--letter-spacing: 0.26px;
+
+  --text-title1-sb: 20.46px;
+  --text-title1-sb--line-height: 30px;
+  --text-title1-sb-font-weight: 600;
+  --text-title1-sb-letter-spacing: 0.06px;
+
+  --text-title2-sb: 13.72px;
+  --text-title2-sb--line-height: 20px;
+  --text-title2-sb--font-weight: 700;
+  --text-title2-sb--letter-spacing: 0.04px;
+
+  --text-title3-sb: 26.75px;
+  --text-title3-sb--line-height: 20px;
+  --text-title3-sb--font-weight: 700;
+  --text-title3-sb--letter-spacing: 0.07px;
+
+  --text-title4-sb: 20.92px;
+  --text-title4-sb--line-height: 15.64px;
+  --text-title4-sb--font-weight: 700;
+  --text-title4-sb--letter-spacing: 0.06px;
+
+  --text-text1-sb: 4.36px;
+  --text-text1-sb--line-height: 7px;
+  --text-text1-sb--font-weight: 800;
+  --text-text1-sb--letter-spacing: 0.02px;
+
+  --text-text2-sb: 6.86px;
+  --text-text2-sb--line-height: 10px;
+  --text-text2-sb--font-weight: 800;
+  --text-text2-sb--letter-spacing: 0.02px;
+
+  --text-text3-sb: 15.21px;
+  --text-text3-sb--line-height: 31px;
+  --text-text3-sb--font-weight: 400;
+  --text-text3-sb--letter-spacing: 0.21px;
+
+  --text-text4-sb: 14.72px;
+  --text-text4-sb--line-height: 30px;
+  --text-text4-sb--font-weight: 400;
+  --text-text4-sb--letter-spacing: 0.75px;
+
+  --text-text5-sb: 11.14px;
+  --text-text5-sb--line-height: 14.17px;
+  --text-text5-sb--font-weight: 400;
+  --text-text5-sb--letter-spacing: 0.03px;
+}
