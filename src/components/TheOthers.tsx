@@ -1,11 +1,18 @@
-const TheOthers = () => {
+import { getPopularMovies } from "@/api/tmdb";
+import { RectangleSliders } from "./carousel/Carousel";
+
+const TheOthers =async () => {
+    const movies = await getPopularMovies();
+
     return(
-        <div className="ml-4 mt-7">
-            <div className="border w-[111px] h-26.75px">Others 제목</div>
-            <div className="mt-2.5 flex gap-2">
-                {/* 그외 영화 */}
-                <div className="w-[103px] h-[161px] border"></div>
-                <div className="w-[103px] h-[161px] border"></div>
+        <div className="mt-7">
+            <div className="ml-4 w-[130px] h-26.75px">
+                <p className="text-title4-sb">
+                    Others 제목
+                    </p>
+                    </div>
+            <div className="ml-4 mt-2.5 flex gap-2">
+               <RectangleSliders movies={movies}/>
             </div>
         </div>
     )

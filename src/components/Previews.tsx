@@ -1,11 +1,18 @@
-const Previews = () => {
+import { getPopularMovies } from "@/api/tmdb";
+import { CircleSliders } from "./carousel/Carousel";
+
+const Previews = async () => {
+    const movies= await getPopularMovies();
+
     return(
-        <div className="ml-4 mt-7">
-            <div className="border w-[111px] h-26.75px">Previews</div>
-            <div className="mt-5 flex gap-2">
-                {/* Previews 영화 */}
-                <div className="w-[102px] h-[102px] rounded-[1000px] border"></div>
-                 <div className="w-[102px] h-[102px] rounded-[1000px] border"></div>
+        <div className="mt-7">
+            <div className="ml-4 w-[111px] h-26.75px">
+                <p className="text-title3-sb">
+                Previews
+                </p>
+                </div>
+            <div className="ml-4 mt-5 flex gap-2">
+            <CircleSliders movies={movies}/>
             </div>
         </div>
     )
