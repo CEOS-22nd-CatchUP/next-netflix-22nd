@@ -5,12 +5,12 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { Movie } from '@/type/type';
 import Image from 'next/image';
+import { IMAGE_BASE_URL } from '@/api/tmdb';
+
 
 interface SlidersProps {
   movies: Movie[]; // Movie 객체 배열을 받음
 }
-
-const TMDB_IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w500';
 
 export function CircleSliders({ movies }: SlidersProps) {
   const settings = {
@@ -33,7 +33,7 @@ export function CircleSliders({ movies }: SlidersProps) {
                 className="w-[102px] h-[102px] rounded-full overflow-hidden"
               >
                 <Image 
-                  src={`${TMDB_IMAGE_BASE_URL}${movie.poster_path}`}
+                  src={`${IMAGE_BASE_URL}${movie.poster_path}`}
                   alt={movie.title} 
                   width={102}
                   height={102}
@@ -68,7 +68,7 @@ export function RectangleSliders({movies}: SlidersProps) {
             <div key={movie.id} className="px-1">
               <div className="w-[103px] h-[161px] rounded-[2px] overflow-hidden">
                 <Image
-                  src={`${TMDB_IMAGE_BASE_URL}${movie.poster_path}`}
+                  src={`${IMAGE_BASE_URL}${movie.poster_path}`}
                   alt={movie.title}
                   width={103}
                   height={161}
