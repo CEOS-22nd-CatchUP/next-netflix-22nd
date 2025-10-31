@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import Image from "next/image";
 import top10Logo from '@/svgs/menuBar/top10Logo.svg'
 import { BIG_IMAGE_BASE_URL, getPopularMovies} from "@/api/tmdb";
