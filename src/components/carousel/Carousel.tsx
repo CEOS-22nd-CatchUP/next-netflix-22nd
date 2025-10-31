@@ -81,3 +81,38 @@ export function RectangleSliders({movies}: SlidersProps) {
     </div>
   );
 }
+
+export function BigRectangleSliders({movies}: SlidersProps) {
+  const settings = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 2.2,
+    slidesToScroll: 1,
+    arrows: false,
+  };
+
+  const items = Array.from({ length: 7 }, (_, i) => `안녕 ${i + 1}`);
+
+  return (
+    <div className="w-full max-w-[600px] mx-auto">
+      <Slider {...settings}>
+       {movies
+          .filter((movie) => movie.poster_path)
+          .map((movie) => (
+            <div key={movie.id} className="px-1">
+              <div className="w-[154px] h-[251px] rounded-[2px] overflow-hidden">
+                <Image
+                  src={`${IMAGE_BASE_URL}${movie.poster_path}`}
+                  alt={movie.title}
+                  width={154}
+                  height={251}
+                  className="object-cover w-full h-full"
+                />
+              </div>
+            </div>
+          ))}
+      </Slider>
+    </div>
+  );
+}
