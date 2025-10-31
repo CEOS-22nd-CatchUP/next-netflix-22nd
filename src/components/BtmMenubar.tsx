@@ -1,27 +1,21 @@
-import HomeIcon from '@/components/icons/HomeIcon';
-import SearchIcon from '@/components/icons/SearchIcon';
-import CommingSoonIcon from '@/components/icons/CommingSoonIcon';
-import DownloadIcon from '@/components/icons/DownloadIcon';
-import MoreIcon from '@/components/icons/MoreIcon'
+import { BTM_MENU_ITEMS } from "@/constants/menuItems";
 
 const BtmMenubar = () => {
     return(
-        <div className="w-[375px] h-20 pb-[31.7px] px-5 justify-between border absolute bottom-0 flex flex-end bg-gray-3 text-gray-1 text-nav3-sm">
-            <div className="">
-            <HomeIcon />
-            </div>
-            <div>
-            <SearchIcon />
-            </div>
-            <div>
-            <CommingSoonIcon />
-            </div>
-            <div>
-            <DownloadIcon />
-            </div>
-            <div>
-            <MoreIcon />
-            </div>
+        <div className="py-3 gap-[7px] w-[375px] justify-center flex absolute bottom-0 items-center bg-gray-3 text-gray-1 text-nav3-sm">
+            {BTM_MENU_ITEMS.map((item) => {
+                const Icon = item.icon;
+                return(
+                    <div key={item.label} className="w-[63.8px] h-10 items-center">
+                    <div className={`flex flex-col items-center ${item.adjustTop ? '-mt-px' : ''}`}>
+                        <div className="cursor-pointer">
+                        <Icon />
+                        </div>
+                        <p className={`${item.mtClass} cursor-pointer`}>{item.label}</p>
+                    </div>
+                    </div>
+                );
+            })}
         </div>
     )
 
