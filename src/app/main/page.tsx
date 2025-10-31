@@ -1,4 +1,5 @@
 import CurrentPlaying from '@/components/CurrentPlaying';
+import { Crimes, NetflixOriginal, Thrillers } from '@/components/Genre';
 import MidMenubar from '@/components/MidMenubar';
 import Previews from '@/components/Previews';
 import TheOthers from '@/components/TheOthers';
@@ -12,9 +13,9 @@ export default async function Page(){
             </div>
             <Previews />
             <TheOthers />
-            <TheOthers />
-            <TheOthers />
-            <TheOthers />
+            <Crimes/>
+            <NetflixOriginal/>
+            <Thrillers/>
             <div className="h-20" />
         </div>
     )
