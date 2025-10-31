@@ -6,9 +6,9 @@ const TheOthers =async () => {
 
     return(
         <div className="mt-7">
-            <div className="ml-4 w-[130px] h-26.75px">
+            <div className="ml-4 w-[200px] h-26.75px">
                 <p className="text-title4-sb">
-                    Others 제목
+                    Trending Now
                     </p>
                     </div>
             <div className="ml-4 mt-2.5 flex gap-2">
