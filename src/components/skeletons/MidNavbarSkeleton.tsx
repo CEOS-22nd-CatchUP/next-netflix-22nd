@@ -1,4 +1,4 @@
-export function MidMenubarSkeleton() {
+export function MidNavbarSkeleton() {
   return (
     <div className="mt-2 flex h-[45px] w-[259px] animate-pulse items-center justify-between">
       <div className="flex flex-col items-center justify-center gap-1">

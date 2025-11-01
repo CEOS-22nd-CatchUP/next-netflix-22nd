@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Logo from '@/svgs/logo/smallLogo.svg';
 import Image from 'next/image';
 
-const TopMenubar = () => {
+const TopNavbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -35,4 +35,4 @@ const TopMenubar = () => {
   );
 };
 
-export default TopMenubar;
+export default TopNavbar;

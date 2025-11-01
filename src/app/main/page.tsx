@@ -1,6 +1,6 @@
 import CurrentPlaying from '@/components/CurrentPlaying';
 import { Crimes, NetflixOriginal, Thrillers } from '@/components/Genre';
-import MidMenubar from '@/components/MidMenubar';
+import MidNavbar from '@/components/MidNavbar';
 import Previews from '@/components/Previews';
 import TheOthers from '@/components/TheOthers';
 
@@ -9,7 +9,7 @@ export default async function Page() {
     <div className="flex flex-col bg-black text-white">
       <CurrentPlaying />
       <div className="flex justify-center">
-        <MidMenubar />
+        <MidNavbar />
       </div>
       <Previews />
       <TheOthers />

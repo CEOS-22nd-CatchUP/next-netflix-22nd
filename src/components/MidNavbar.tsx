@@ -5,7 +5,7 @@ import PlayBtn from '@/svgs/previewBar/playButton.svg';
 import InfoBtn from '@/svgs/previewBar/info.svg';
 import Image from 'next/image';
 
-const MidMenubar = () => {
+const MidNavbar = () => {
   return (
     <div className="mt-[8] flex h-[45px] w-[259px] items-center justify-between">
       <div className="text-nav2-sm flex cursor-pointer flex-col items-center justify-center text-white">
@@ -24,4 +24,4 @@ const MidMenubar = () => {
   );
 };
 
-export default MidMenubar;
+export default MidNavbar;

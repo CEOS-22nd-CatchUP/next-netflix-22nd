@@ -5,7 +5,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import { BTM_MENU_ITEMS } from '@/constants/menuItems';
 import { useMenuStore } from '@/store/useMenuStore';
 
-const BtmMenubar = () => {
+const BtmNavbar = () => {
   const active = useMenuStore((s) => s.active);
   const setActive = useMenuStore((s) => s.setActive);
   const router = useRouter();
@@ -48,4 +48,4 @@ const BtmMenubar = () => {
   );
 };
 
-export default BtmMenubar;
+export default BtmNavbar;

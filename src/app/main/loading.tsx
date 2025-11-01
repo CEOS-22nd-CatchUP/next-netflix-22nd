@@ -1,5 +1,5 @@
 import { CurrentPlayingSkeleton } from '@/components/skeletons/CurrentPlayingSkeleton';
-import { MidMenubarSkeleton } from '@/components/skeletons/MidMenubarSkeleton';
+import { MidNavbarSkeleton } from '@/components/skeletons/MidNavbarSkeleton';
 import { PreviewsSkeleton } from '@/components/skeletons/PreviewSkeleton';
 import { TheOthersSkeleton } from '@/components/skeletons/TheOthersSkeleton';
 
@@ -8,7 +8,7 @@ export default function Loading() {
     <div className="flex flex-col bg-black text-white">
       <CurrentPlayingSkeleton />
       <div className="flex justify-center">
-        <MidMenubarSkeleton />
+        <MidNavbarSkeleton />
       </div>
       <PreviewsSkeleton />
       <TheOthersSkeleton />

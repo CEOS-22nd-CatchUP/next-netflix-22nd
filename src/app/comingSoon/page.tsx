@@ -1,6 +1,6 @@
 'use client';
 
-import BtmMenubar from '@/components/BtmMenubar';
+import BtmMenubar from '@/components/BtmNavbar';
 
 export default function Page() {
   return (
