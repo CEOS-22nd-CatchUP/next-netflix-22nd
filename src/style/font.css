@@ -8,13 +8,13 @@
 @theme {
   --text-nav1-sm: 17.2px;
   --text-nav1-sm--line-height: 30.45px;
-  --text-nav1-sm-font-weight: 400;
-  --text-nav1-sm-letter-spacing: 0.76px;
+  --text-nav1-sm--font-weight: 400;
+  --text-nav1-sm--letter-spacing: 0.76px;
 
   --text-nav2-sm: 13.64px;
   --text-nav2-sm--line-height: 20px;
-  --text-nav2-sm-font-weight: 400;
-  --text-nav2-sm-letter-spacing: 0.04px;
+  --text-nav2-sm--font-weight: 400;
+  --text-nav2-sm--letter-spacing: 0.04px;
 
   --text-nav3-sm: 8.2px;
   --text-nav3-sm--line-height: 30.4px;
@@ -23,8 +23,8 @@
 
   --text-title1-sb: 20.46px;
   --text-title1-sb--line-height: 30px;
-  --text-title1-sb-font-weight: 600;
-  --text-title1-sb-letter-spacing: 0.06px;
+  --text-title1-sb--font-weight: 600;
+  --text-title1-sb--letter-spacing: 0.06px;
 
   --text-title2-sb: 13.72px;
   --text-title2-sb--line-height: 20px;

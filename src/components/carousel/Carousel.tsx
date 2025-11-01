@@ -28,7 +28,7 @@ export function CircleSliders({ movies }: SlidersProps) {
           .filter((movie) => movie.poster_path)
           .map((movie) => (
             <div key={movie.id} className="flex justify-center">
-              <div className="h-[102px] w-[102px] overflow-hidden rounded-full">
+              <div className="h-[102px] w-[102px] cursor-pointer overflow-hidden rounded-full">
                 <Image
                   src={`${IMAGE_BASE_URL}${movie.poster_path}`}
                   alt={movie.title}
@@ -63,7 +63,7 @@ export function RectangleSliders({ movies }: SlidersProps) {
           .filter((movie) => movie.poster_path)
           .map((movie) => (
             <div key={movie.id} className="px-1">
-              <div className="h-[161px] w-[103px] overflow-hidden rounded-[2px]">
+              <div className="h-[161px] w-[103px] cursor-pointer overflow-hidden rounded-[2px]">
                 <Image
                   src={`${IMAGE_BASE_URL}${movie.poster_path}`}
                   alt={movie.title}
@@ -98,7 +98,7 @@ export function BigRectangleSliders({ movies }: SlidersProps) {
           .filter((movie) => movie.poster_path)
           .map((movie) => (
             <div key={movie.id} className="px-1">
-              <div className="h-[251px] w-[154px] overflow-hidden rounded-[2px]">
+              <div className="h-[251px] w-[154px] cursor-pointer overflow-hidden rounded-[3px]">
                 <Image
                   src={`${IMAGE_BASE_URL}${movie.poster_path}`}
                   alt={movie.title}

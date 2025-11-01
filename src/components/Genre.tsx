@@ -8,7 +8,7 @@ export const Crimes = async () => {
       <div className="h-26.75px ml-4 w-[200px]">
         <p className="text-title4-sb">Crime TV Series</p>
       </div>
-      <div className="mt-2.5 ml-4 flex gap-2">
+      <div className="mt-2.5 ml-3 flex gap-2">
         <RectangleSliders movies={movies} />
       </div>
     </div>
@@ -22,7 +22,7 @@ export const Thrillers = async () => {
       <div className="h-26.75px ml-4 w-[200px]">
         <p className="text-title4-sb">Mystery TV Series</p>
       </div>
-      <div className="mt-2.5 ml-4 flex gap-2">
+      <div className="mt-2.5 ml-3 flex gap-2">
         <RectangleSliders movies={movies} />
       </div>
     </div>
@@ -36,7 +36,7 @@ export const NetflixOriginal = async () => {
       <div className="h-26.75px ml-4 w-[200px]">
         <p className="text-title4-sb">Netflix Originals</p>
       </div>
-      <div className="mt-2.5 ml-4 flex gap-2">
+      <div className="mt-2.5 ml-3 flex gap-2">
         <BigRectangleSliders movies={movies} />
       </div>
     </div>

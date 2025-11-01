@@ -23,7 +23,6 @@ const CurrentPlaying = async () => {
         className="brightness- z-0 h-[415px] w-full object-cover"
       />
 
-      {/* backgroundIMG */}
       <div className="items-center justify-center"></div>
       <div className="text-title2-sb relative z-10 flex">
         <Image src={top10Logo} alt="top10" className="mr-1" />#{rank} in Korea Today
