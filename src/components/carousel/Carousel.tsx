@@ -54,7 +54,7 @@ export function RectangleSliders({ movies }: SlidersProps) {
     arrows: false,
   };
 
-  const items = Array.from({ length: 7 }, (_, i) => `안녕 ${i + 1}`);
+  // const items = Array.from({ length: 7 }, (_, i) => `안녕 ${i + 1}`);
 
   return (
     <div className="mx-auto w-full max-w-[600px]">
@@ -89,7 +89,7 @@ export function BigRectangleSliders({ movies }: SlidersProps) {
     arrows: false,
   };
 
-  const items = Array.from({ length: 7 }, (_, i) => `안녕 ${i + 1}`);
+  // const items = Array.from({ length: 7 }, (_, i) => `안녕 ${i + 1}`);
 
   return (
     <div className="mx-auto w-full max-w-[600px]">
