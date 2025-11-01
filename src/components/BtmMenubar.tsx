@@ -1,10 +1,27 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
 import { BTM_MENU_ITEMS } from '@/constants/menuItems';
+import { useMenuStore } from '@/store/useMenuStore';
 
 const BtmMenubar = () => {
-  const [active, setActive] = useState(0);
+  const active = useMenuStore((s) => s.active);
+  const setActive = useMenuStore((s) => s.setActive);
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const handleClick = (index: number, path?: string) => {
+    setActive(index);
+    if (path) {
+      router.push(path);
+    }
+  };
+
+  useEffect(() => {
+    const idx = BTM_MENU_ITEMS.findIndex((item) => item.path === pathname);
+    if (idx >= 0) setActive(idx);
+  }, [pathname, setActive]);
 
   return (
     <div className="bg-gray-3 text-nav3-sm absolute bottom-0 flex w-[375px] items-center justify-between gap-[7px] px-7 py-3">
@@ -13,7 +30,7 @@ const BtmMenubar = () => {
         const isActive = index === active;
 
         return (
-          <div key={item.label} className="flex h-10 gap-5" onClick={() => setActive(index)}>
+          <div key={item.label} className="flex h-10 gap-5" onClick={() => handleClick(index, item.path)}>
             <div
               className={`flex flex-col items-center ${item.adjustTextTop ? '-mt-[1.5px]' : ''} ${item.adjustPx ? '-mx-2' : ''}`}
             >
