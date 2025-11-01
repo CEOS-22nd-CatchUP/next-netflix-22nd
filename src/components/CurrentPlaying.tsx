@@ -1,7 +1,6 @@
 export const dynamic = 'force-dynamic';
 
 import Image from 'next/image';
-import top10Logo from '@/svgs/menuBar/top10Logo.svg';
 import { BIG_IMAGE_BASE_URL, getPopularMovies } from '@/api/tmdb';
 
 const CurrentPlaying = async () => {
@@ -26,7 +25,10 @@ const CurrentPlaying = async () => {
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
 
       <div className="text-title2-sb relative z-10 mb-1 flex items-center">
-        <Image src={top10Logo} alt="top10" className="mr-1" />
+        <div className="mr-1.5 ml-2 flex w-[15px] flex-col items-center justify-center border border-white text-center text-white">
+          <div className="text-text1-sb -mb-[3px]">TOP</div>
+          <div className="text-text2-sb">10</div>
+        </div>
         <span>#{rank} in Korea Today</span>
       </div>
     </div>
