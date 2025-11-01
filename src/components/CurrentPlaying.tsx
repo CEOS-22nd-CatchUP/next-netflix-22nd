@@ -14,18 +14,20 @@ const CurrentPlaying = async () => {
   const rank = randomIndex + 1;
 
   return (
-    <div className="flex h-[415px] w-full flex-col items-center justify-between">
+    <div className="relative flex h-[415px] w-full items-end justify-center">
       <Image
         src={`${BIG_IMAGE_BASE_URL}${movie.backdrop_path}`}
         alt={movie.title}
         width={1920}
         height={415}
-        className="brightness- z-0 h-[415px] w-full object-cover"
+        className="absolute inset-0 h-[415px] w-full object-cover"
       />
 
-      <div className="items-center justify-center"></div>
-      <div className="text-title2-sb relative z-10 flex">
-        <Image src={top10Logo} alt="top10" className="mr-1" />#{rank} in Korea Today
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+
+      <div className="text-title2-sb relative z-10 mb-1 flex items-center">
+        <Image src={top10Logo} alt="top10" className="mr-1" />
+        <span>#{rank} in Korea Today</span>
       </div>
     </div>
   );
