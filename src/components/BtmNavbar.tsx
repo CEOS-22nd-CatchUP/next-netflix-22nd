@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
-import { BTM_MENU_ITEMS } from '@/constants/menuItems';
+import { BTM_MENU_ITEMS } from '@/constants/bottomNavItems';
 import { useMenuStore } from '@/store/useMenuStore';
 
 const BtmNavbar = () => {

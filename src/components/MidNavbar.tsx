@@ -1,12 +1,12 @@
 'use client';
 
-import AddBtn from '@/svgs/previewBar/addButton.svg';
-import PlayBtn from '@/svgs/previewBar/playButton.svg';
-import InfoBtn from '@/svgs/previewBar/info.svg';
+import AddBtn from '@/components/icons/midNavbar/AddBtn';
+import PlayBtn from '@/components/icons/midNavbar/PlayBtn';
+import InfoBtn from '@/components/icons/midNavbar/InfoBtn';
 
 const MidNavbar = () => {
   return (
-    <div className="mt-[8] flex h-[45px] w-[259px] items-center justify-between">
+    <div className="mt-2 flex h-[45px] w-[259px] items-center justify-between">
       <div className="text-nav2-sm flex cursor-pointer flex-col items-center justify-center text-white">
         <AddBtn />
         <p>My List</p>
