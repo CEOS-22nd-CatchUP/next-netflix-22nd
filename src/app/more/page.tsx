@@ -1,3 +1,5 @@
+'use client';
+
 import BtmMenubar from '@/components/BtmMenubar';
 
 export default function Page() {

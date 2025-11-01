@@ -1,3 +1,5 @@
+'use client';
+
 import AddBtn from '@/svgs/previewBar/addButton.svg';
 import PlayBtn from '@/svgs/previewBar/playButton.svg';
 import InfoBtn from '@/svgs/previewBar/info.svg';
