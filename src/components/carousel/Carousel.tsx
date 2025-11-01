@@ -31,7 +31,7 @@ export function CircleSliders({ movies }: SlidersProps) {
               <div className="h-[102px] w-[102px] cursor-pointer overflow-hidden rounded-full">
                 <Image
                   src={`${IMAGE_BASE_URL}${movie.poster_path}`}
-                  alt={movie.title}
+                  alt=""
                   width={102}
                   height={102}
                   className="h-full w-full object-cover"
@@ -66,7 +66,7 @@ export function RectangleSliders({ movies }: SlidersProps) {
               <div className="h-[161px] w-[103px] cursor-pointer overflow-hidden rounded-[2px]">
                 <Image
                   src={`${IMAGE_BASE_URL}${movie.poster_path}`}
-                  alt={movie.title}
+                  alt=""
                   width={103}
                   height={161}
                   className="h-full w-full object-cover"
@@ -101,7 +101,7 @@ export function BigRectangleSliders({ movies }: SlidersProps) {
               <div className="h-[251px] w-[154px] cursor-pointer overflow-hidden rounded-[3px]">
                 <Image
                   src={`${IMAGE_BASE_URL}${movie.poster_path}`}
-                  alt={movie.title}
+                  alt=""
                   width={154}
                   height={251}
                   className="h-full w-full object-cover"
