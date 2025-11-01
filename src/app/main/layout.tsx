@@ -1,4 +1,4 @@
-import TopNavbar from '@/components/TopNavbar';
+import TopNavbar from '@/app/main/components/TopNavbar';
 import BtmNavbar from '@/components/BtmNavbar';
 
 export default function Layout({ children }: { children: React.ReactNode }) {

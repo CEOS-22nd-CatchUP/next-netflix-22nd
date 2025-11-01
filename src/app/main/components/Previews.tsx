@@ -1,5 +1,5 @@
 import { getPopularMovies } from '@/api/tmdb';
-import { CircleSliders } from './carousel/Carousel';
+import { CircleSliders } from '../../../components/carousel/Carousel';
 
 const Previews = async () => {
   const movies = await getPopularMovies();

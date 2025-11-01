@@ -1,7 +1,7 @@
-import { CurrentPlayingSkeleton } from '@/components/skeletons/CurrentPlayingSkeleton';
-import { MidNavbarSkeleton } from '@/components/skeletons/MidNavbarSkeleton';
-import { PreviewsSkeleton } from '@/components/skeletons/PreviewSkeleton';
-import { TheOthersSkeleton } from '@/components/skeletons/TheOthersSkeleton';
+import { CurrentPlayingSkeleton } from '@/app/main/components/skeletons/CurrentPlayingSkeleton';
+import { MidNavbarSkeleton } from '@/app/main/components/skeletons/MidNavbarSkeleton';
+import { PreviewsSkeleton } from '@/app/main/components/skeletons/PreviewSkeleton';
+import { TheOthersSkeleton } from '@/app/main/components/skeletons/TheOthersSkeleton';
 
 export default function Loading() {
   return (
