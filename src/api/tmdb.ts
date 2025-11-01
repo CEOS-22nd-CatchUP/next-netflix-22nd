@@ -3,12 +3,9 @@ export const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w500';
 export const BIG_IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/original';
 
 export async function getPopularMovies() {
-  const res = await fetch(
-    `${BASE_URL}/3/movie/popular?api_key=${process.env.TMDB_API_KEY}&language=ko-KR`,
-    {
-      next: { revalidate: 3600 },
-    }
-  );
+  const res = await fetch(`${BASE_URL}/3/movie/popular?api_key=${process.env.TMDB_API_KEY}&language=ko-KR`, {
+    next: { revalidate: 3600 },
+  });
 
   if (!res.ok) {
     throw new Error('Failed to fetch movies');
@@ -24,7 +21,7 @@ export async function getDiscoverTvByGenre(genreId: number | string) {
     `${BASE_URL}/3/discover/tv?api_key=${process.env.TMDB_API_KEY}&language=ko-KR&sort_by=popularity.desc&with_genres=${genreId}&watch_region=KR`,
     {
       next: { revalidate: 3600 }, // 1시간 캐시
-    }
+    },
   );
 
   if (!res.ok) {

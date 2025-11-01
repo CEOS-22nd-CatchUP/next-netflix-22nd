@@ -7,7 +7,6 @@ import { Movie } from '@/type/type';
 import Image from 'next/image';
 import { IMAGE_BASE_URL } from '@/api/tmdb';
 
-
 interface SlidersProps {
   movies: Movie[]; // Movie 객체 배열을 받음
 }
@@ -23,21 +22,19 @@ export function CircleSliders({ movies }: SlidersProps) {
   };
 
   return (
-    <div className="w-full max-w-[600px] mx-auto">
+    <div className="mx-auto w-full max-w-[600px]">
       <Slider {...settings}>
         {movies
           .filter((movie) => movie.poster_path)
           .map((movie) => (
             <div key={movie.id} className="flex justify-center">
-              <div 
-                className="w-[102px] h-[102px] rounded-full overflow-hidden"
-              >
-                <Image 
+              <div className="h-[102px] w-[102px] overflow-hidden rounded-full">
+                <Image
                   src={`${IMAGE_BASE_URL}${movie.poster_path}`}
-                  alt={movie.title} 
+                  alt={movie.title}
                   width={102}
                   height={102}
-                  className="object-cover w-full h-full" 
+                  className="h-full w-full object-cover"
                 />
               </div>
             </div>
@@ -47,7 +44,7 @@ export function CircleSliders({ movies }: SlidersProps) {
   );
 }
 
-export function RectangleSliders({movies}: SlidersProps) {
+export function RectangleSliders({ movies }: SlidersProps) {
   const settings = {
     dots: false,
     infinite: false,
@@ -60,19 +57,19 @@ export function RectangleSliders({movies}: SlidersProps) {
   const items = Array.from({ length: 7 }, (_, i) => `안녕 ${i + 1}`);
 
   return (
-    <div className="w-full max-w-[600px] mx-auto">
+    <div className="mx-auto w-full max-w-[600px]">
       <Slider {...settings}>
-       {movies
+        {movies
           .filter((movie) => movie.poster_path)
           .map((movie) => (
             <div key={movie.id} className="px-1">
-              <div className="w-[103px] h-[161px] rounded-[2px] overflow-hidden">
+              <div className="h-[161px] w-[103px] overflow-hidden rounded-[2px]">
                 <Image
                   src={`${IMAGE_BASE_URL}${movie.poster_path}`}
                   alt={movie.title}
                   width={103}
                   height={161}
-                  className="object-cover w-full h-full"
+                  className="h-full w-full object-cover"
                 />
               </div>
             </div>
@@ -82,7 +79,7 @@ export function RectangleSliders({movies}: SlidersProps) {
   );
 }
 
-export function BigRectangleSliders({movies}: SlidersProps) {
+export function BigRectangleSliders({ movies }: SlidersProps) {
   const settings = {
     dots: false,
     infinite: false,
@@ -95,19 +92,19 @@ export function BigRectangleSliders({movies}: SlidersProps) {
   const items = Array.from({ length: 7 }, (_, i) => `안녕 ${i + 1}`);
 
   return (
-    <div className="w-full max-w-[600px] mx-auto">
+    <div className="mx-auto w-full max-w-[600px]">
       <Slider {...settings}>
-       {movies
+        {movies
           .filter((movie) => movie.poster_path)
           .map((movie) => (
             <div key={movie.id} className="px-1">
-              <div className="w-[154px] h-[251px] rounded-[2px] overflow-hidden">
+              <div className="h-[251px] w-[154px] overflow-hidden rounded-[2px]">
                 <Image
                   src={`${IMAGE_BASE_URL}${movie.poster_path}`}
                   alt={movie.title}
                   width={154}
                   height={251}
-                  className="object-cover w-full h-full"
+                  className="h-full w-full object-cover"
                 />
               </div>
             </div>

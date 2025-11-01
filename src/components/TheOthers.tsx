@@ -1,5 +1,5 @@
-import { getPopularMovies } from "@/api/tmdb";
-import { RectangleSliders } from "./carousel/Carousel";
+import { getPopularMovies } from '@/api/tmdb';
+import { RectangleSliders } from './carousel/Carousel';
 
 // const TheOthers =async () => {
 //     const movies = await getPopularMovies();
@@ -26,10 +26,10 @@ export default async function TheOthers() {
 
   return (
     <div className="mt-7">
-      <div className="ml-4 w-[200px] h-26.75px">
+      <div className="h-26.75px ml-4 w-[200px]">
         <p className="text-title4-sb">Trending Now</p>
       </div>
-      <div className="ml-4 mt-2.5 flex gap-2">
+      <div className="mt-2.5 ml-4 flex gap-2">
         <RectangleSliders movies={movies} />
       </div>
     </div>

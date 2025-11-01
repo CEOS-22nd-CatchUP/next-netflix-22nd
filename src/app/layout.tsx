@@ -2,18 +2,14 @@ import type { Metadata } from 'next';
 import '@/style/globals.css';
 
 export const metadata: Metadata = {
-    title: "Netflix",
-    description: "Netflix clone-coding"
-}
+  title: 'Netflix',
+  description: 'Netflix clone-coding',
+};
 
-export default function RootLayout({
-    children,
-} : {
-    children: React.ReactNode;
-}) {
-    return(
-        <html lang="ko">
-            <body className="font-SFPro">{children}</body>
-        </html>
-    );
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="ko">
+      <body className="font-SFPro">{children}</body>
+    </html>
+  );
 }
