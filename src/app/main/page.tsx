@@ -1,5 +1,5 @@
 import CurrentPlaying from '@/app/main/components/CurrentPlaying';
-import { Crimes, NetflixOriginal, Thrillers } from '@/components/Genre';
+import { Crimes, NetflixOriginal, Thrillers } from '@/app/main/components/Genre';
 import MidNavbar from '@/app/main/components/MidNavbar';
 import Previews from '@/app/main/components/Previews';
 import TheOthers from '@/app/main/components/TheOthers';
