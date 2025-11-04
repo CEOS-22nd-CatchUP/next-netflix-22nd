@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import SmallLogo from '@/components/main/icons/topNavbar/SmallLogo';
+// import SmallLogo from '@/assets/svgs/logo/smallLogo.svg';
 
 const TopNavbar = () => {
   const [scrolled, setScrolled] = useState(false);

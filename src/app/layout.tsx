@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import '@/style/globals.css';
+import BtmNavbarWrapper from '@/components/BtmNavbarWrapper';
 
 export const metadata: Metadata = {
   title: 'Netflix',
@@ -9,7 +10,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ko">
-      <body>{children}</body>
+      <body>
+        {children}
+        <BtmNavbarWrapper />
+      </body>
     </html>
   );
 }

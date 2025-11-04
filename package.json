@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "@tanstack/react-query": "^5.90.5",
+    "clsx": "^2.1.1",
     "lottie-react": "^2.4.1",
     "next": "16.0.0",
+    "next-plugin-svgr": "^1.1.12",
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "react-slick": "^0.31.0",

@@ -3,13 +3,15 @@
 @import 'slick-carousel/slick/slick.css';
 @import 'slick-carousel/slick/slick-theme.css';
 
-* {
-  font-family: 'SFPro', ui-sans-serif, system-ui, sans-serif;
-}
+@layer base {
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
 
-::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
+  body {
+    font-family: 'SFPro', ui-sans-serif, system-ui, sans-serif;
+  }
 }
 
 @theme {
@@ -20,88 +22,4 @@
 
   --color-black: #000000;
   --color-white: #ffffff;
-}
-
-@utility text-nav1-sm {
-  font-size: var(--text-nav1-sm);
-  line-height: var(--text-nav1-sm--line-height);
-  font-weight: var(--text-nav1-sm--font-weight);
-  letter-spacing: var(--text-nav1-sm--letter-spacing);
-}
-
-@utility text-nav2-sm {
-  font-size: var(--text-nav2-sm);
-  line-height: var(--text-nav2-sm--line-height);
-  font-weight: var(--text-nav2-sm--font-weight);
-  letter-spacing: var(--text-nav2-sm--letter-spacing);
-}
-
-@utility text-nav3-sm {
-  font-size: var(--text-nav3-sm);
-  line-height: var(--text-nav3-sm--line-height);
-  font-weight: var(--text-nav3-sm--font-weight);
-  letter-spacing: var(--text-nav3-sm--letter-spacing);
-}
-
-@utility text-title1-sb {
-  font-size: var(--text-title1-sb);
-  line-height: var(--text-title1-sb--line-height);
-  font-weight: var(--text-title1-sb--font-weight);
-  letter-spacing: var(--text-title1-sb--letter-spacing);
-}
-
-@utility text-title2-sb {
-  font-size: var(--text-title2-sb);
-  line-height: var(--text-title2-sb--line-height);
-  font-weight: var(--text-title2-sb--font-weight);
-  letter-spacing: var(--text-title2-sb--letter-spacing);
-}
-
-@utility text-title3-sb {
-  font-size: var(--text-title3-sb);
-  line-height: var(--text-title3-sb--line-height);
-  font-weight: var(--text-title3-sb--font-weight);
-  letter-spacing: var(--text-title3-sb--letter-spacing);
-}
-
-@utility text-title4-sb {
-  font-size: var(--text-title4-sb);
-  line-height: var(--text-title4-sb--line-height);
-  font-weight: var(--text-title4-sb--font-weight);
-  letter-spacing: var(--text-title4-sb--letter-spacing);
-}
-
-@utility text-text1-sb {
-  font-size: var(--text-text1-sb);
-  line-height: var(--text-text1-sb--line-height);
-  font-weight: var(--text-text1-sb--font-weight);
-  letter-spacing: var(--text-text1-sb--letter-spacing);
-}
-
-@utility text-text2-sb {
-  font-size: var(--text-text2-sb);
-  line-height: var(--text-text2-sb--line-height);
-  font-weight: var(--text-text2-sb--font-weight);
-  letter-spacing: var(--text-text2-sb--letter-spacing);
-}
-
-@utility text-text3-sb {
-  font-size: var(--text-text3-sb);
-  line-height: var(--text-text3-sb--line-height);
-  font-weight: var(--text-text3-sb--font-weight);
-  letter-spacing: var(--text-text3-sb--letter-spacing);
-}
-
-@utility text-text4-sb {
-  font-size: var(--text-text4-sb);
-  line-height: var(--text-text4-sb--line-height);
-  font-weight: var(--text-text4-sb--font-weight);
-  letter-spacing: var(--text-text4-sb--letter-spacing);
-}
-
-@utility text-text5-sb {
-  font-size: var(--text-text5-sb);
-  line-height: var(--text-text5-sb--line-height);
-  font-weight: var(--text-text5-sb--font-weight);
-  letter-spacing: var(--text-text5-sb--letter-spacing);
 }

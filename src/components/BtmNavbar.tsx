@@ -2,7 +2,8 @@
 
 import { useEffect } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
-import { BTM_MENU_ITEMS } from '@/constants/bottomNavItems';
+import clsx from 'clsx';
+import { BTM_MENU_ITEMS } from '@/constants/btmNavItems';
 import { useMenuStore } from '@/store/useMenuStore';
 
 const BtmNavbar = () => {
@@ -30,18 +31,21 @@ const BtmNavbar = () => {
         const isActive = index === active;
 
         return (
-          <div key={item.label} className="flex h-10 gap-5" onClick={() => handleClick(index, item.path)}>
+          <button key={item.label} className="flex h-10 gap-5" onClick={() => handleClick(index, item.path)}>
             <div
-              className={`flex flex-col items-center ${item.adjustTextTop ? '-mt-[1.5px]' : ''} ${item.adjustPx ? '-mx-2' : ''}`}
+              className={clsx('flex flex-col items-center', {
+                '-mt-[1.5px]': item.adjustTextTop,
+                '-mx-2': item.adjustPx,
+              })}
             >
-              <div className={`cursor-pointer ${item.adjustIconTop ? '-mt-px' : ''}`}>
+              <div className={clsx('cursor-pointer', { '-mt-px': item.adjustIconTop })}>
                 <Icon color={isActive ? '#ffffff' : '#8C8787'} />
               </div>
-              <p className={`${item.mtClass} ${isActive ? 'text-white' : 'text-gray-1'} cursor-pointer`}>
+              <p className={clsx('cursor-pointer', item.mtClass, { 'text-white': isActive, 'text-gray-1': !isActive })}>
                 {item.label}
               </p>
             </div>
-          </div>
+          </button>
         );
       })}
     </div>

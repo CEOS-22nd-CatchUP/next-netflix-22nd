@@ -1,5 +1,4 @@
 import TopNavbar from '@/components/main/TopNavbar';
-import BtmNavbar from '@/components/BtmNavbar';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -9,7 +8,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <TopNavbar />
         </div>
         <div className="flex-1 overflow-y-auto">{children}</div>
-        <BtmNavbar />
       </div>
     </div>
   );
