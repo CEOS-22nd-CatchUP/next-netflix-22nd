@@ -1,8 +1,8 @@
 'use client';
 
-import AddBtn from '@/svgs/previewBar/addButton.svg?url';
-import PlayBtn from '@/svgs/previewBar/playButton.svg?url';
-import InfoBtn from '@/svgs/previewBar/info.svg?url';
+import AddBtn from '/svgs/previewBar/addButton.svg?url';
+import PlayBtn from '/svgs/previewBar/playButton.svg?url';
+import InfoBtn from '/svgs/previewBar/info.svg?url';
 import Image from 'next/image';
 
 const MidMenubar = () => {
