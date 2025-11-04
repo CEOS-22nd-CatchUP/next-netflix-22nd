@@ -1,5 +1,3 @@
-import { IconProps } from '@/type/menu.type';
-
 const ComingSoonIcon = ({ color = '#8C8787', ...props }: IconProps) => (
   <svg width="20" height="20" viewBox="0 0 20 20" fill="#8C8787" xmlns="http://www.w3.org/2000/svg" {...props}>
     <path

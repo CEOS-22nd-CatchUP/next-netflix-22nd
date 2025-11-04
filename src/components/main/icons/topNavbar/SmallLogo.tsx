@@ -1,5 +1,3 @@
-import { IconProps } from '@/type/menu.type';
-
 const SmallLogo = ({ ...props }: IconProps) => (
   <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
     <path
