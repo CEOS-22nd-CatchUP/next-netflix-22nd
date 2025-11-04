@@ -1,5 +1,5 @@
 import { getPopularMovies } from '@/api/tmdb';
-import { RectangleSliders } from '../../../components/carousel/Carousel';
+import { RectangleSliders } from '../carousel/Carousel';
 
 export default async function TheOthers() {
   const movies = await getPopularMovies();

@@ -1,8 +1,8 @@
 'use client';
 
-import AddBtn from '@/app/main/components/icons/midNavbar/AddBtn';
-import PlayBtn from '@/app/main/components/icons/midNavbar/PlayBtn';
-import InfoBtn from '@/app/main/components/icons/midNavbar/InfoBtn';
+import AddBtn from '@/components/main/icons/midNavbar/AddBtn';
+import PlayBtn from '@/components/main/icons/midNavbar/PlayBtn';
+import InfoBtn from '@/components/main/icons/midNavbar/InfoBtn';
 
 const MidNavbar = () => {
   return (

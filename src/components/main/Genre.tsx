@@ -1,5 +1,5 @@
 import { getDiscoverTvByGenre } from '@/api/tmdb';
-import { BigRectangleSliders, RectangleSliders } from '../../../components/carousel/Carousel';
+import { BigRectangleSliders, RectangleSliders } from '../carousel/Carousel';
 
 export const Crimes = async () => {
   const movies = await getDiscoverTvByGenre(80);

@@ -1,8 +1,8 @@
-import CurrentPlaying from '@/app/main/components/CurrentPlaying';
-import { Crimes, NetflixOriginal, Thrillers } from '@/app/main/components/Genre';
-import MidNavbar from '@/app/main/components/MidNavbar';
-import Previews from '@/app/main/components/Previews';
-import TheOthers from '@/app/main/components/TheOthers';
+import CurrentPlaying from '@/components/main/CurrentPlaying';
+import { Crimes, NetflixOriginal, Thrillers } from '@/components/main/Genre';
+import MidNavbar from '@/components/main/MidNavbar';
+import Previews from '@/components/main/Previews';
+import TheOthers from '@/components/main/TheOthers';
 
 export default async function Page() {
   return (

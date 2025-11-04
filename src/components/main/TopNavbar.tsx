@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import SmallLogo from '@/app/main/components/icons/topNavbar/SmallLogo';
+import SmallLogo from '@/components/main/icons/topNavbar/SmallLogo';
 
 const TopNavbar = () => {
   const [scrolled, setScrolled] = useState(false);
