@@ -1,8 +1,8 @@
-import HomeIcon from '@/components/icons/btmNavbar/HomeIcon';
-import SearchIcon from '@/components/icons/btmNavbar/SearchIcon';
-import ComingSoonIcon from '@/components/icons/btmNavbar/ComingSoonIcon';
-import DownloadIcon from '@/components/icons/btmNavbar/DownloadIcon';
-import MoreIcon from '@/components/icons/btmNavbar/MoreIcon';
+import HomeIcon from '@/components/main/icons/btmNavbar/HomeIcon';
+import SearchIcon from '@/components/main/icons/btmNavbar/SearchIcon';
+import ComingSoonIcon from '@/components/main/icons/btmNavbar/ComingSoonIcon';
+import DownloadIcon from '@/components/main/icons/btmNavbar/DownloadIcon';
+import MoreIcon from '@/components/main/icons/btmNavbar/MoreIcon';
 
 export const BTM_MENU_ITEMS = [
   { label: 'Home', icon: HomeIcon, path: '/main', mtClass: '-mt-[7px]', adjustIconTop: true },
