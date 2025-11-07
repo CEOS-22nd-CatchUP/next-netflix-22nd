@@ -1,26 +1,31 @@
-'use client';
+import AddBtn from '@/assets/svgs/previewBar/addButton.svg?url';
+import PlayBtn from '@/assets/svgs/previewBar/playButton.svg?url';
+import InfoBtn from '@/assets/svgs/previewBar/infoButton.svg?url';
+// import AddBtn from '@/assets/svgs/previewBar/addButton.svg';
+// import PlayBtn from '@/assets/svg/previewBar/playButton.svg';
+// import InfoBtn from '@/assets/svgs/previewBar/infoButton.svg';
+import Image from 'next/image';
 
-import AddBtn from '@/components/main/icons/midNavbar/AddBtn';
-import PlayBtn from '@/components/main/icons/midNavbar/PlayBtn';
-import InfoBtn from '@/components/main/icons/midNavbar/InfoBtn';
-
-const MidNavbar = () => {
+const MidMenubar = () => {
   return (
-    <div className="mt-2 flex h-[45px] w-[259px] items-center justify-between">
+    <div className="mt-[8] flex h-[45px] w-[259px] items-center justify-between">
       <div className="text-nav2-sm flex cursor-pointer flex-col items-center justify-center text-white">
-        <AddBtn />
-        <p>Add</p>
+        <Image src={AddBtn} alt="add my list" />
+        {/* <AddBtn /> */}
+        <p>My List</p>
       </div>
       <div className="bg-gray-0 text-title1-sb flex h-[45px] w-[110px] cursor-pointer items-center justify-between rounded-[5px] text-black hover:bg-white">
-        <PlayBtn className="ml-[19px]" />
+        <Image src={PlayBtn} alt="play" className="ml-[19px]" />
+        {/* <PlayBtn /> */}
         <p className="mr-[19px]">Play</p>
       </div>
       <div className="text-nav2-sm flex cursor-pointer flex-col items-center justify-center text-white">
-        <InfoBtn />
+        <Image src={InfoBtn} alt="info" />
+        {/* <InfoBtn /> */}
         <p>Info</p>
       </div>
     </div>
   );
 };
 
-export default MidNavbar;
+export default MidMenubar;

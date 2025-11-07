@@ -1,5 +1,22 @@
 'use client';
 
+import InputSearch from '@/components/search/InputSearch';
+import SearchList from '@/components/search/SearchList';
+
 export default function Page() {
-  return <div className="flex min-h-screen items-center justify-center bg-black text-white">Search 페이지</div>;
+  return (
+    <div className="flex h-screen flex-col">
+      <div className="top-0 flex-shrink-0">
+        <div className="flex w-full justify-center pt-11">
+          <InputSearch />
+        </div>
+        <div>
+          <div className="text-title3-sb my-[15px] text-white">Top Searches</div>
+        </div>
+      </div>
+      <div className="flex-1 overflow-y-auto pb-17">
+        <SearchList />
+      </div>
+    </div>
+  );
 }
