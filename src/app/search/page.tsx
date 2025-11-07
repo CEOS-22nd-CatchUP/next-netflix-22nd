@@ -11,7 +11,7 @@ export default function Page() {
           <InputSearch />
         </div>
         <div>
-          <div className="text-title3-sb my-[15px] text-white">Top Searches</div>
+          <div className="text-title3-sb my-5 ml-2 text-white">Top Searches</div>
         </div>
       </div>
       <div className="flex-1 overflow-y-auto pb-17">
