@@ -1,4 +1,5 @@
 'use client';
+
 import SearchIcon from '@/assets/svgs/search/searchIcon.svg?url';
 import XIcon from '@/components/search/icons/XIcon';
 import { useSearchStore } from '@/store/useSearchStore';

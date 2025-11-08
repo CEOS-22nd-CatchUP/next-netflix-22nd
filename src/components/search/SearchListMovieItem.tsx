@@ -7,14 +7,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
-interface MovieItemProps {
-  movie: {
-    id: number;
-    title: string;
-    poster_path: string;
-  };
-}
-
 const MovieItem = ({ movie }: MovieItemProps) => {
   const [imageLoaded, setImageLoaded] = useState(false);
 

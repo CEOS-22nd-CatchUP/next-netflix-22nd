@@ -4,12 +4,6 @@ import { useState } from 'react';
 import { BIG_IMAGE_BASE_URL } from '@/libs/tmdb';
 import { MovieImageSkeleton } from '@/components/movie/skeletons/MovieImageSkeleton';
 
-interface MovieImageProps {
-  backdrop_path: string;
-  title: string;
-  height?: number;
-}
-
 export default function MovieImage({ backdrop_path, title, height = 415 }: MovieImageProps) {
   const [isLoading, setIsLoading] = useState(true);
 

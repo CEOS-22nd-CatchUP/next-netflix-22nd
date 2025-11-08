@@ -70,6 +70,7 @@ export async function getMovieDetail(id: number | string) {
 
   return res.json();
 }
+
 export async function searchMovie(query: string, page: number = 1) {
   const res = await fetch(`/api/search?query=${encodeURIComponent(query)}&page=${page}`);
 

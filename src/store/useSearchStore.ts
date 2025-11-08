@@ -1,18 +1,6 @@
 import { getPopularMoviesInClient, searchMovie } from '@/libs/tmdb';
 import { create } from 'zustand';
 
-interface SearchState {
-  query: string;
-  results: any[];
-  isLoading: boolean;
-  page: number;
-  hasMore: boolean;
-  error: string | null;
-  setQuery: (query: string) => void;
-  search: () => Promise<void>;
-  loadMore: () => Promise<void>;
-  initialLoad: () => Promise<void>;
-}
 export const useSearchStore = create<SearchState>((set, get) => ({
   query: '',
   results: [],
@@ -46,6 +34,19 @@ export const useSearchStore = create<SearchState>((set, get) => ({
     }
   },
 
+  initialLoad: async () => {
+    const { results, query, isLoading } = get();
+    if (results.length > 0 || query || isLoading) return;
+
+    set({ isLoading: true });
+    try {
+      const data = await getPopularMoviesInClient(1);
+      set({ results: data, page: 1, hasMore: true, isLoading: false });
+    } catch (error) {
+      set({ isLoading: false });
+    }
+  },
+
   loadMore: async () => {
     const { query, page, results, isLoading, hasMore } = get();
     if (isLoading || !hasMore) return;
@@ -72,18 +73,6 @@ export const useSearchStore = create<SearchState>((set, get) => ({
       });
     } catch (error) {
       set({ isLoading: false, hasMore: false });
-    }
-  },
-  initialLoad: async () => {
-    const { results, query, isLoading } = get();
-    if (results.length > 0 || query || isLoading) return;
-
-    set({ isLoading: true });
-    try {
-      const data = await getPopularMoviesInClient(1);
-      set({ results: data, page: 1, hasMore: true, isLoading: false });
-    } catch (error) {
-      set({ isLoading: false });
     }
   },
 }));

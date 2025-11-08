@@ -3,11 +3,6 @@ import Image from 'next/image';
 import PlayBtn from '@/assets/svgs/previewBar/playButton.svg?url';
 import MovieImg from '@/components/movie/MovieImage';
 
-interface MovieDetailPageProps {
-  params: Promise<{
-    id: string;
-  }>;
-}
 export default async function MovieDetailPage({ params }: MovieDetailPageProps) {
   const { id } = await params;
   const movie = await getMovieDetail(id);

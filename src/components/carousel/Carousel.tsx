@@ -56,8 +56,6 @@ export function RectangleSliders({ movies }: SlidersProps) {
     arrows: false,
   };
 
-  // const items = Array.from({ length: 7 }, (_, i) => `안녕 ${i + 1}`);
-
   return (
     <div className="mx-auto w-full max-w-[600px]">
       <Slider {...settings}>
@@ -92,8 +90,6 @@ export function BigRectangleSliders({ movies }: SlidersProps) {
     slidesToScroll: 1,
     arrows: false,
   };
-
-  // const items = Array.from({ length: 7 }, (_, i) => `안녕 ${i + 1}`);
 
   return (
     <div className="mx-auto w-full max-w-[600px]">
