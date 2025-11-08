@@ -56,3 +56,14 @@ export async function getMovieDetail(id: number | string) {
 
   return res.json();
 }
+export async function searchMovie(query: string) {
+  const res = await fetch(`/api/search?query=${encodeURIComponent(query)}`);
+
+  if (!res.ok) {
+    throw new Error('Search failed');
+  }
+
+  const data = await res.json();
+  console.log('searchMovie data:', data);
+  return data.results;
+}
