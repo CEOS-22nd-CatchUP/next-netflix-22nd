@@ -1,9 +1,10 @@
-'use client';
-
+import { getPopularMovies } from '@/api/tmdb';
 import InputSearch from '@/components/search/InputSearch';
 import SearchList from '@/components/search/SearchList';
 
-export default function Page() {
+export default async function Page() {
+  const popularMovies = await getPopularMovies();
+
   return (
     <div className="flex h-screen flex-col">
       <div className="top-0 flex-shrink-0">
@@ -15,7 +16,7 @@ export default function Page() {
         </div>
       </div>
       <div className="flex-1 overflow-y-auto pb-17">
-        <SearchList />
+        <SearchList initialMovies={popularMovies} />
       </div>
     </div>
   );
