@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Image from 'next/image';
 import { IMAGE_BASE_URL } from '@/api/tmdb';
+import Link from 'next/link';
 
 interface SlidersProps {
   movies: Movie[]; // Movie 객체 배열을 받음
@@ -27,15 +28,17 @@ export function CircleSliders({ movies }: SlidersProps) {
           .filter((movie) => movie.poster_path)
           .map((movie) => (
             <div key={movie.id} className="flex justify-center">
-              <div className="h-[102px] w-[102px] cursor-pointer overflow-hidden rounded-full">
-                <Image
-                  src={`${IMAGE_BASE_URL}${movie.poster_path}`}
-                  alt=""
-                  width={102}
-                  height={102}
-                  className="h-full w-full object-cover"
-                />
-              </div>
+              <Link href={`/movie/${movie.id}`}>
+                <div className="h-[102px] w-[102px] cursor-pointer overflow-hidden rounded-full">
+                  <Image
+                    src={`${IMAGE_BASE_URL}${movie.poster_path}`}
+                    alt=""
+                    width={102}
+                    height={102}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              </Link>
             </div>
           ))}
       </Slider>
@@ -62,15 +65,17 @@ export function RectangleSliders({ movies }: SlidersProps) {
           .filter((movie) => movie.poster_path)
           .map((movie) => (
             <div key={movie.id} className="px-1">
-              <div className="h-[161px] w-[103px] cursor-pointer overflow-hidden rounded-[2px]">
-                <Image
-                  src={`${IMAGE_BASE_URL}${movie.poster_path}`}
-                  alt=""
-                  width={103}
-                  height={161}
-                  className="h-full w-full object-cover"
-                />
-              </div>
+              <Link href={`/movie/${movie.id}`}>
+                <div className="h-[161px] w-[103px] cursor-pointer overflow-hidden rounded-[2px]">
+                  <Image
+                    src={`${IMAGE_BASE_URL}${movie.poster_path}`}
+                    alt=""
+                    width={103}
+                    height={161}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              </Link>
             </div>
           ))}
       </Slider>
@@ -97,15 +102,17 @@ export function BigRectangleSliders({ movies }: SlidersProps) {
           .filter((movie) => movie.poster_path)
           .map((movie) => (
             <div key={movie.id} className="px-1">
-              <div className="h-[251px] w-[154px] cursor-pointer overflow-hidden rounded-[3px]">
-                <Image
-                  src={`${IMAGE_BASE_URL}${movie.poster_path}`}
-                  alt=""
-                  width={154}
-                  height={251}
-                  className="h-full w-full object-cover"
-                />
-              </div>
+              <Link href={`/movie/${movie.id}`}>
+                <div className="h-[251px] w-[154px] cursor-pointer overflow-hidden rounded-[3px]">
+                  <Image
+                    src={`${IMAGE_BASE_URL}${movie.poster_path}`}
+                    alt=""
+                    width={154}
+                    height={251}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              </Link>
             </div>
           ))}
       </Slider>
