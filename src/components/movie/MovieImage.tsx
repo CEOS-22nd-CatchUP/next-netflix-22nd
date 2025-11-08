@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import { useState } from 'react';
-import { BIG_IMAGE_BASE_URL } from '@/api/tmdb';
+import { BIG_IMAGE_BASE_URL } from '@/libs/tmdb';
 import { MovieImageSkeleton } from '@/components/movie/skeletons/MovieImageSkeleton';
 
 interface MovieImageProps {

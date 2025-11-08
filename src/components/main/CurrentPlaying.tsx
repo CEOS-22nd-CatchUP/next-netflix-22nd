@@ -1,7 +1,7 @@
 export const dynamic = 'force-dynamic';
 
 import Image from 'next/image';
-import { BIG_IMAGE_BASE_URL, getPopularMovies } from '@/api/tmdb';
+import { BIG_IMAGE_BASE_URL, getPopularMovies } from '@/libs/tmdb';
 
 const CurrentPlaying = async () => {
   const movies = await getPopularMovies();

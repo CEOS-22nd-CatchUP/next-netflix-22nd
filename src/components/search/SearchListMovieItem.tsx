@@ -1,6 +1,6 @@
 'use client';
 
-import { IMAGE_BASE_URL } from '@/api/tmdb';
+import { IMAGE_BASE_URL } from '@/libs/tmdb';
 import PlayCircleIcon from '@/components/search/icons/PlayCircleIcon';
 import { SearchListSkeleton } from '@/components/search/skeletons/SearchListSkeleton';
 import Image from 'next/image';

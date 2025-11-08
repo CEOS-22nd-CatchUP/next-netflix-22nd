@@ -1,4 +1,4 @@
-import { getMovieDetail } from '@/api/tmdb';
+import { getMovieDetail } from '@/libs/tmdb';
 import Image from 'next/image';
 import PlayBtn from '@/assets/svgs/previewBar/playButton.svg?url';
 import MovieImg from '@/components/movie/MovieImage';

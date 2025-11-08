@@ -1,4 +1,4 @@
-import { getDiscoverMoviesByGenre, getDiscoverTvByGenre } from '@/api/tmdb';
+import { getDiscoverMoviesByGenre, getDiscoverTvByGenre } from '@/libs/tmdb';
 import { BigRectangleSliders, RectangleSliders } from '../carousel/Carousel';
 
 export const Crimes = async () => {

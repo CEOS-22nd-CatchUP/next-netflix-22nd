@@ -1,4 +1,4 @@
-import { getPopularMovies } from '@/api/tmdb';
+import { getPopularMovies } from '@/libs/tmdb';
 import { RectangleSliders } from '@/components/carousel/Carousel';
 
 export default async function TheOthers() {

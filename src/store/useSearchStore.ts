@@ -1,4 +1,4 @@
-import { getPopularMoviesInClient, searchMovie } from '@/api/tmdb';
+import { getPopularMoviesInClient, searchMovie } from '@/libs/tmdb';
 import { create } from 'zustand';
 
 interface SearchState {

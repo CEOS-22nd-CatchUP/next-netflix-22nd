@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Image from 'next/image';
-import { IMAGE_BASE_URL } from '@/api/tmdb';
+import { IMAGE_BASE_URL } from '@/libs/tmdb';
 import Link from 'next/link';
 
 interface SlidersProps {
