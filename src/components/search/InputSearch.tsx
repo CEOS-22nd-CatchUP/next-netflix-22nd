@@ -14,9 +14,7 @@ export default function InputSearch() {
 
   useEffect(() => {
     const debounceTimer = setTimeout(() => {
-      if (query.trim()) {
-        search();
-      }
+      search();
     }, 500);
     return () => clearTimeout(debounceTimer);
   }, [query, search]);

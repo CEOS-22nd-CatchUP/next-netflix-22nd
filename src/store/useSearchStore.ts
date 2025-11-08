@@ -25,10 +25,18 @@ export const useSearchStore = create<SearchState>((set, get) => ({
 
   search: async () => {
     const { query } = get();
+
     if (!query.trim()) {
       set({ results: [], page: 1, hasMore: true });
+      try {
+        const data = await getPopularMoviesInClient(1);
+        set({ results: data, isLoading: false, hasMore: true, page: 1 });
+      } catch (error) {
+        set({ results: [], isLoading: false, hasMore: false });
+      }
       return;
     }
+
     set({ isLoading: true, page: 1, hasMore: true });
     try {
       const data = await searchMovie(query, 1);
@@ -37,6 +45,7 @@ export const useSearchStore = create<SearchState>((set, get) => ({
       set({ results: [], isLoading: false, hasMore: false });
     }
   },
+
   loadMore: async () => {
     const { query, page, results, isLoading, hasMore } = get();
     if (isLoading || !hasMore) return;
