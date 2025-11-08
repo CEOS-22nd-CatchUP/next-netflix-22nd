@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const query = searchParams.get('query');
-
+  const page = searchParams.get('page') || '1';
   if (!query) {
     return NextResponse.json({ results: [] });
   }
@@ -11,7 +11,7 @@ export async function GET(request: Request) {
   const tmdbRes = await fetch(
     `https://api.themoviedb.org/3/search/movie?api_key=${process.env.TMDB_API_KEY}&language=ko-KR&query=${encodeURIComponent(
       query,
-    )}&page=1&include_adult=false`,
+    )}&page=${page}&include_adult=false`,
   );
 
   if (!tmdbRes.ok) {

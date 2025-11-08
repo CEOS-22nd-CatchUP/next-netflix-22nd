@@ -2,13 +2,27 @@ const BASE_URL = 'https://api.themoviedb.org';
 export const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w500';
 export const BIG_IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/original';
 
-export async function getPopularMovies() {
-  const res = await fetch(`${BASE_URL}/3/movie/popular?api_key=${process.env.TMDB_API_KEY}&language=ko-KR`, {
-    next: { revalidate: 3600 },
-  });
+export async function getPopularMovies(page: number = 1) {
+  const res = await fetch(
+    `${BASE_URL}/3/movie/popular?api_key=${process.env.TMDB_API_KEY}&language=ko-KR&page=${page}`,
+    {
+      next: { revalidate: 3600 },
+    },
+  );
 
   if (!res.ok) {
     throw new Error('Failed to fetch movies');
+  }
+
+  const data = await res.json();
+  return data.results;
+}
+
+export async function getPopularMoviesInClient(page: number = 1) {
+  const res = await fetch(`/api/popular?page=${page}`);
+
+  if (!res.ok) {
+    throw new Error('Failed to fetch popular movies from internal API');
   }
 
   const data = await res.json();
@@ -56,14 +70,13 @@ export async function getMovieDetail(id: number | string) {
 
   return res.json();
 }
-export async function searchMovie(query: string) {
-  const res = await fetch(`/api/search?query=${encodeURIComponent(query)}`);
+export async function searchMovie(query: string, page: number = 1) {
+  const res = await fetch(`/api/search?query=${encodeURIComponent(query)}&page=${page}`);
 
   if (!res.ok) {
     throw new Error('Search failed');
   }
 
   const data = await res.json();
-  console.log('searchMovie data:', data);
   return data.results;
 }
