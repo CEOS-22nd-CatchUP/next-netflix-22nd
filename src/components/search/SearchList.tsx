@@ -73,10 +73,10 @@ const SearchList = () => {
                   )}
                 </div>
                 <div className="mx-4 flex flex-1 items-center justify-between">
-                  <div className="text-text4-sb flex h-[55px] items-center overflow-hidden text-white">
+                  <div className="text-text4-sb mr-2 flex h-[55px] items-center overflow-hidden leading-5 text-white">
                     <span>{movie.title}</span>
                   </div>
-                  <div className="hover:color-white cursor-pointer">
+                  <div className="text-gray-0 cursor-pointer hover:text-white">
                     <PlayCircleIcon />
                   </div>
                 </div>
