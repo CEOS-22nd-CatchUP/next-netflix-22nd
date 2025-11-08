@@ -81,6 +81,7 @@ const SearchList = () => {
         );
       })}
       {!isLoading && hasMore && <div ref={observerTarget} className="h-4 w-full" />}
+      {!isLoading && results.length === 0 && <div className="p-4 text-center text-gray-400">검색 결과가 없습니다.</div>}
 
       {/* {isLoading && <div className="p-4 text-center text-gray-400">Loading more...</div>} */}
     </div>
