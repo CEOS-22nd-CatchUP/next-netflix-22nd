@@ -5,7 +5,9 @@ import BtmNavbar from '@/components/BtmNavbar';
 
 const BtmNavbarWrapper = () => {
   const pathname = usePathname();
-  const showBtmNavbar = ['/main', '/search', '/comingSoon', '/downloads', '/more'].some((p) => pathname.startsWith(p));
+  const showBtmNavbar = ['/main', '/search', '/comingSoon', '/downloads', '/more', '/movie'].some((p) =>
+    pathname.startsWith(p),
+  );
 
   if (!showBtmNavbar) return null;
 
