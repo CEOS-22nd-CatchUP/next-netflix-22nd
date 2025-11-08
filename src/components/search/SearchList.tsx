@@ -5,23 +5,56 @@ import PlayCircleIcon from '@/components/search/icons/PlayCircleIcon';
 import { useSearchStore } from '@/store/useSearchStore';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useRef } from 'react';
 
-interface SearchListProps {
-  initialMovies: any[];
-}
+//검색결과 없을 때 화면하고, 로딩 추가해야함
 
-const SearchList = ({ initialMovies }: SearchListProps) => {
-  const { results, isLoading, query } = useSearchStore();
+const SearchList = () => {
+  const { results, isLoading, query, loadMore, hasMore, initialLoad } = useSearchStore();
+  const observerTarget = useRef<HTMLDivElement>(null);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  const displayMovies = query ? results : initialMovies;
+  useEffect(() => {
+    initialLoad();
+  }, [initialLoad]);
 
-  if (isLoading) {
-    return <div className="p-4 text-white">로딩중임 스켈레톤 어캐하지</div>;
-  }
+  useEffect(() => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollIntoView({
+        block: 'start',
+        behavior: 'smooth',
+      });
+    }
+  }, [query]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && hasMore && !isLoading) {
+          loadMore();
+        }
+      },
+      { threshold: 1.0 },
+    );
+
+    if (observerTarget.current) {
+      observer.observe(observerTarget.current);
+    }
+
+    return () => {
+      if (observerTarget.current) {
+        observer.unobserve(observerTarget.current);
+      }
+    };
+  }, [observerTarget, loadMore, hasMore, isLoading]);
+
+  // if (isLoading) {
+  //   return <div className="p-4 text-white">로딩중임 스켈레톤 어캐하지</div>;
+  // }
 
   return (
-    <div className="flex flex-col gap-1">
-      {displayMovies.map((movie: any) => {
+    <div className="flex flex-col gap-1" ref={scrollContainerRef}>
+      {results.map((movie: any) => {
         if (!movie.poster_path) return null;
         return (
           <Link key={movie.id} href={`/movie/${movie.id}`} className="">
@@ -47,6 +80,9 @@ const SearchList = ({ initialMovies }: SearchListProps) => {
           </Link>
         );
       })}
+      {!isLoading && hasMore && <div ref={observerTarget} className="h-4 w-full" />}
+
+      {/* {isLoading && <div className="p-4 text-center text-gray-400">Loading more...</div>} */}
     </div>
   );
 };
